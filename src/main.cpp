@@ -3,7 +3,7 @@
 #include "Zigbee.h"
 
 // The ESP32 pin connected to the STX882 DATA pin
-#define RF_TRANSMIT_PIN 4
+#define RF_TRANSMIT_PIN 17
 
 #define ZIGBEE_FAN_ENDPOINT 10
 
@@ -56,7 +56,7 @@ void setup() {
 
   // Initialize 433MHz RF Transmitter
   mySwitch.setPulseLength(240);
-  mySwitch.setRepeatTransmit(10);
+  mySwitch.setRepeatTransmit(16);
   mySwitch.setProtocol(11);
 
   Serial.println("RF Transmitter Initialized.");
